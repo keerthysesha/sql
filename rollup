@@ -1,0 +1,28 @@
+AIM:
+To create a table and implement the roll up.
+
+ALGORITHM:
+Step 1: Open the mysql editor.
+Step 2: Create the database Table.
+Step 3: Insert the given data into the table.
+Step 4: Write the sql query after the insertion.
+Step 5: Execute the code and get the dersired output.
+
+TABLE:
+CREATE TABLE Sales (
+  Product VARCHAR(50),
+  Region VARCHAR(50),
+  Amount DECIMAL(10, 2)
+);
+INSERT INTO Sales (Product, Region, Amount) VALUES
+  ('Product A', 'Region 1', 100.00),
+  ('Product A', 'Region 2', 150.00),
+  ('Product B', 'Region 1', 200.00),
+  ('Product B', 'Region 2', 250.00);
+SELECT Product, Region, SUM(Amount) AS TotalAmount
+FROM Sales
+GROUP BY ROLLUP(Product, Region);
+OUTPUT:
+
+RESULT:
+Thus the a table created and implemention of the roll up has been done.
