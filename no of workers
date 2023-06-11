@@ -1,0 +1,39 @@
+AIM:
+To fetch the no of workers in descending order.
+
+ALGORITHM:
+Step 1: Open the mysql editor.
+Step 2: Create the database Table.
+Step 3: Insert the given data into the table.
+Step 4: Write the sql query after the insertion.
+Step 5: Execute the code and get the dersired output.
+
+TABLE:
+create database Student;
+use Student;
+create table Workers(
+wk_id integer primary key,
+first_name varchar (20),
+last_name varchar (20),
+age integer,
+department varchar(20)
+);
+Insert into Workers (wk_id,first_name,last_name,age,department) Values 
+(1,'Mark','Lucas',21,'CSE');
+Insert into Workers (wk_id,first_name,last_name,age,department) Values 
+(2,'Mary','Ann',25,'IT');
+Insert into Workers (wk_id,first_name,last_name,age,department) Values 
+(3,'Nazar','Chloe',30,'AI-DS');
+Insert into Workers (wk_id,first_name,last_name,age,department) Values 
+(4,'Lisa','Rose',28,'ECE');
+SELECT DEPARTMENT, COUNT(*) AS no_of_works
+FROM Workers
+GROUP BY DEPARTMENT
+ORDER BY no_of_works DESC
+
+OUTPUT:
+
+RESULT:
+Thus the no of workers has been fetched in descending order.
+
+
