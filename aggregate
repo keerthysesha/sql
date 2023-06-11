@@ -1,0 +1,43 @@
+AIM:
+To create a table and perform aggregate function.
+
+ALGORITHM:
+Step 1: Open the mysql editor.
+Step 2: Create the database Table.
+Step 3: Insert the given data into the table.
+Step 4: Write the sql query after the insertion.
+Step 5: Execute the code and get the dersired output.
+
+TABLE:
+CREATE TABLE Employee (
+  EmployeeID INT,
+  FirstName VARCHAR(50),
+  LastName VARCHAR(50),
+  Department VARCHAR(50),
+  Salary DECIMAL(10, 2)
+);
+INSERT INTO Employee (EmployeeID, FirstName, LastName, Department, Salary) VALUES
+  (1, 'John', 'Doe', 'HR', 50000.00),
+  (2, 'Jane', 'Smith', 'IT', 60000.00),
+  (3, 'David', 'Johnson', 'HR', 55000.00),
+  (4, 'Emily', 'Williams', 'Sales', 70000.00),
+  (5, 'Michael', 'Brown', 'IT', 65000.00);
+  
+TOTAL EMPLOYEE:
+SELECT COUNT(*) AS TotalEmployees FROM Employee;
+OUTPUT:
+
+AVERAGE:
+SELECT AVG(Salary) AS AverageSalary FROM Employee;
+OUTPUT:
+
+MAXIMUM AND MINIMUM:
+SELECT MAX(Salary) AS MaximumSalary, MIN(Salary) AS MinimumSalary FROM Employee;
+OUTPUT:
+
+TOTAL SALARY:
+SELECT Department, SUM(Salary) AS TotalSalary FROM Employee GROUP BY Department;
+OUTPUT:
+
+RESULT:
+Thus performing aggregate function on the table has been done.
