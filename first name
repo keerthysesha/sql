@@ -1,0 +1,30 @@
+AIM:
+To implement the case,cross join,full outer join in the given sample data.
+
+ALGORITHM:
+Step 1: Open the mysql editor.
+Step 2: Create the database Table.
+Step 3: Insert the given data into the table.
+Step 4: Write the sql query after the insertion.
+Step 5: Execute the code and get the dersired output.
+
+TABLE:
+create database Student;
+use Student;
+create table Worker(
+wk_id integer primary key,
+first_name varchar (20),
+last_name varchar (20),
+age integer
+);
+Insert into Worker (wk_id,first_name,last_name,age) Values (1,'Mark','Lucas',21);
+Insert into Worker (wk_id,first_name,last_name,age) Values (2,'Mary','Ann',25);
+Insert into Worker (wk_id,first_name,last_name,age) Values (3,'Nazar','Chloe',30);
+Insert into Worker (wk_id,first_name,last_name,age) Values (4,'Lisa','Rose',28);
+SELECT first_name AS alias_name
+FROM Worker
+
+OUTPUT:
+
+RESULT:
+Thus the case,cross join and full outer join has been implemented in the given sample.
