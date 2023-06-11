@@ -1,0 +1,58 @@
+AIM:
+To implement the case,cross join,full outer join in the given sample data.
+
+ALGORITHM:
+Step 1: Open the mysql editor.
+Step 2: Create the database Table.
+Step 3: Insert the given data into the table.
+Step 4: Write the sql query after the insertion.
+Step 5: Execute the code and get the dersired output.
+
+TABLE:
+create database Student;
+use Student;
+create table Students(
+std_id integer primary key,
+std_name varchar (20),
+std_age integer
+);
+Insert into Students (std_id,std_name,std_age) Values (1,'John',16);
+Insert into Students (std_id,std_name,std_age) Values (2,'Mary',15);
+Insert into Students (std_id,std_name,std_age) Values (3,'Issac',18);
+Insert into Students (std_id,std_name,std_age) Values (4,'Saro',16);
+create table Players(
+ply_id integer primary key,
+ply_name varchar (20),
+ply_match integer
+);
+Insert into Players (ply_id,ply_name,ply_match) Values (1,'Mark',10);
+Insert into Players (ply_id,ply_name,ply_match) Values (2,'Mary',5);
+Insert into Players (ply_id,ply_name,ply_match) Values (3,'Lucas',8);
+Insert into Players (ply_id,ply_name,ply_match) Values (4,'Saro',6);
+SELECT * FROM Students;
+SELECT * FROM Players;
+
+CASE:
+SELECT ply_match,
+CASE
+When ply_match >=8 Then 'PRO PLAYER'
+else 'BEGINNER'
+END AS Player
+FROM Players;
+OUTPUT:
+
+CROSS JOIN:
+SELECT *
+FROM Students
+ CROSS JOIN Players;
+ OUTPUT:
+ 
+ FULL OUTER JOIN:
+ SELECT Students.std_id,Students.std_name
+FROM Students
+FULL JOIN Players
+ON Students.std_id = Players.ply_id
+OUTPUT:
+
+RESULT:
+Thus the case,cross join and full outer join has been implemented in the given sample.
